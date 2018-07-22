@@ -1,10 +1,10 @@
 import sys  # import the library
 import csv  # import the csv file
 
-arg_list = sys.argv  # there will be list of arguments set in the system/library where the scripts will run
-
+arg_list = sys.argv
 
 def main():
+    """calls the function that is to be used in the script"""
     # Using csv library, first 'avengers.csv' is opened to as read mode and reading, decoding as ISO-8859-1
     # each line and writing each line to 'avengers_utf.csv' encoded as 'utf-8' character encoding
 
@@ -21,7 +21,7 @@ def main():
                           'Death2', 'Return2', 'Death3', 'Return3', 'Death4', 'Return4', 'Death5', 'Return5', 'Notes']
 
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames,
-                                        delimiter=',')  # object writer operates like a dictionary for the new file rows to include fieldnames and delimiter commas
+                                        delimiter=',')
 
             csv_writer.writeheader()  # use the writeheader method to write the header rows
 

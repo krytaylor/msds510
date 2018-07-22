@@ -1,5 +1,3 @@
-import \
-    msds510.util as mod  # imports the utility module to help with the functions of the scripts. Processes the avenger file
 import sys
 import csv
 
@@ -8,13 +6,14 @@ arg_list = sys.argv
 file = arg_list[1]  # the file takes two arguments the original and the modified
 modified_file = arg_list[2]
 
-
+ """calls the function that is to be used in the script"""
 def main():
     with open(file, 'r', newline='') as csv_file:  # open file in read, newline denoted by single quote.
         lines = csv_file.readlines()  # lines variable set to read each line in the file
 
-        fields = mod.line_to_row(lines[0])  # fields variable set to read each line in a row from the header
+# fields variable set to read each line in a row from the header
 
+        fields = mod.line_to_row(lines[0])
         nice_fields = mod.line_to_row(
             mod.make_nice_name(lines[0]))  # fields are unique name in the modified file header
         nice_fields.append('month_joined')  # add the month joined to the fields

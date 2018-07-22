@@ -1,10 +1,11 @@
 import datetime
 import calendar
 
-
+ """calls the function that is to be used in the script"""
 def main():          #defines module
     print(days_since_joined('2013', '13-Nov'))   #display days since joined
 
+ """calls the date that will be used in the script"""
 def get_month(date):
 
     if len(date) == 0 or date == 'YES':                   #if date since joined is 0 or YES, return teh date rows
@@ -14,7 +15,7 @@ def get_month(date):
     month = date[1] if date[0].isdigit() else date[0]      #month is the date from second row if all the dates in the header are digits or else date will be same as in header row
 
     return datetime.datetime.strptime(month,'%b').month  #return datetime with month
-
+ """calls the year and day of the date joined that is to be used in the script"""
 def get_date_joined(year,day):                  #get date joined for year and day
     date = day.split('-')                       #date is set to the day split by delimiter
 

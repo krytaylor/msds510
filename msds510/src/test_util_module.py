@@ -1,6 +1,8 @@
-import msds510.util as mod     #implement the msds510 folder as utility as a module to use to run script
+import msds510.util as mod
 import csv
 import sys
+
+#implement the msds510 folder as utility as a module to use to run script
 
 arg_list = sys.argv
 
