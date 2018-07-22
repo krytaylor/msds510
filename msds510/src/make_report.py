@@ -1,5 +1,5 @@
-import msds510.util as mod
 import csv
+
 import sys
 
 arg_list = sys.argv
