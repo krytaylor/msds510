@@ -15,6 +15,7 @@ def get_month(date):
     month = date[1] if date[0].isdigit() else date[0]      #month is the date from second row if all the dates in the header are digits or else date will be same as in header row
 
     return datetime.datetime.strptime(month,'%b').month  #return datetime with month
+
  """calls the year and day of the date joined that is to be used in the script"""
 def get_date_joined(year,day):                  #get date joined for year and day
     date = day.split('-')                       #date is set to the day split by delimiter
@@ -25,22 +26,26 @@ def get_date_joined(year,day):                  #get date joined for year and da
     day = int(date[0] if date[0].isdigit() else date[1])%calendar.monthrange(year,month)[1]  #get day number if same as header row or else the second row
 
     return datetime.date(year,month,day)                     #return the date in format year, month and day
-
+"""calls the year and day of the date since joined that is to be used in the script"""
 def days_since_joined(year,day):
     today = datetime.date.today()                     #today's date
 
     return today - get_date_joined(year,day)           #subtract date joined year and day by today's date
 
+"""calls the line of each row that is to be used in the script"""
 def line_to_row(line):
     return line.split(',')                        #for each line in a row return the line split with delimiter, separated by commas
 
-def row_to_record(row,fields):               #for each row in the record return dictioanry with fields and row
+"""calls the fields and row of the dictionary that is to be used in the script"""
+def row_to_record(row,fields):               #for each row in the record return dictionary with fields and row
 
      return dict(zip(fields,row))
 
+"""calls the created name that is to be used in the script"""
 def make_nice_name(name):
     return name.replace(' ','_').replace('/','_').lower().strip()         #In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
 
+"""calls the transformed record that corresponds to the modified file that is to be used in the script"""
 def transform_record(record_dict):                   #read transformed record as dictionary
 
     record_dict['notes'] = record_dict['notes'].strip()              #the strip the dictionary of notes

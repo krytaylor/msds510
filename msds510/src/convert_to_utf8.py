@@ -3,8 +3,9 @@ import csv  # import the csv file
 
 arg_list = sys.argv
 
+"""calls the function that is to be used in the script"""
 def main():
-    """calls the function that is to be used in the script"""
+
     # Using csv library, first 'avengers.csv' is opened to as read mode and reading, decoding as ISO-8859-1
     # each line and writing each line to 'avengers_utf.csv' encoded as 'utf-8' character encoding
 
