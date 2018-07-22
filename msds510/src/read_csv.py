@@ -3,7 +3,9 @@ import sys
 
 arg_list = sys.argv
 
-filename = arg_list[1]  # fieldname variable is eqal to first arugment
+# fieldname variable is equal to first argument
+
+filename = arg_list[1]
 lines = []  # lines are a list
 
 # The new 'avengers_utf.csv' file is then opened again as read mode

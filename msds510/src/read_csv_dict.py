@@ -4,9 +4,9 @@ import sys
 arg_list = sys.argv
 
 filename = arg_list[1]  # fieldnames variable set to argument 1
-lines = []  # list variable
+lines = []
 
-with open(filename, 'r') as csv_file:  # open file in read mode
+with open(filename, 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     for line in csv_reader:
         lines.append(line)  # Add lines in the list

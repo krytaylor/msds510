@@ -1,50 +1,61 @@
 import datetime
 import calendar
 
-
-def main():          #defines module
-    print(days_since_joined('2013', '13-Nov'))   #display days since joined
+#defines module
+def main():
+    print(days_since_joined('2013', '13-Nov'))
 
 def get_month(date):
 
-    if len(date) == 0 or date == 'YES':                   #if date since joined is 0 or YES, return teh date rows
+    if len(date) == 0 or date == 'YES':
         return
     date = date.split('-')       #date split by delimiter
 
-    month = date[1] if date[0].isdigit() else date[0]      #month is the date from second row if all the dates in the header are digits or else date will be same as in header row
+     #month is the date from second row if all the dates in the header are digits or else date will be same as header
 
-    return datetime.datetime.strptime(month,'%b').month  #return datetime with month
+    month = date[1] if date[0].isdigit() else date[0]
 
-def get_date_joined(year,day):                  #get date joined for year and day
-    date = day.split('-')                       #date is set to the day split by delimiter
+    return datetime.datetime.strptime(month,'%b').month
 
-    year = int(year)                          #year is set to integer year
+def get_date_joined(year,day):
+    date = day.split('-')
+
+#year is set to integer year
+    year = int(year)
     month = get_month(day)
 
-    day = int(date[0] if date[0].isdigit() else date[1])%calendar.monthrange(year,month)[1]  #get day number if same as header row or else the second row
+    #get day number if same as header row or else the second row
 
-    return datetime.date(year,month,day)                     #return the date in format year, month and day
+    day = int(date[0] if date[0].isdigit() else date[1])%calendar.monthrange(year,month)[1]
+
+    return datetime.date(year,month,day)
 
 def days_since_joined(year,day):
-    today = datetime.date.today()                     #today's date
+    today = datetime.date.today()
 
-    return today - get_date_joined(year,day)           #subtract date joined year and day by today's date
+    return today - get_date_joined(year,day)
+
+#for each line in a row return the line split with delimiter, separated by commas
 
 def line_to_row(line):
-    return line.split(',')                        #for each line in a row return the line split with delimiter, separated by commas
+    return line.split(',')
 
-def row_to_record(row,fields):               #for each row in the record return dictioanry with fields and row
+#for each row in the record return dictioanry with fields and row
+def row_to_record(row,fields):
 
      return dict(zip(fields,row))
 
+#In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
+
 def make_nice_name(name):
-    return name.replace(' ','_').replace('/','_').lower().strip()         #In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
+    return name.replace(' ','_').replace('/','_').lower().strip()
 
-def transform_record(record_dict):                   #read transformed record as dictionary
+#read transformed record as dictionary
+def transform_record(record_dict):
 
-    record_dict['notes'] = record_dict['notes'].strip()              #the strip the dictionary of notes
-    for key, value in record_dict.items():                                #for key in dictionary items value
-        if key == 'death' or key == 'return':                       #if key is death or return, the key will be True or False
+    record_dict['notes'] = record_dict['notes'].strip()
+    for key, value in record_dict.items():
+        if key == 'death' or key == 'return':
             record_dict[key] = to_bool(record_dict[key])
     return record_dict
 
