@@ -8,15 +8,15 @@ arg_list = sys.argv
 file = arg_list[1]
 modified_file = arg_list[2]
 
-# lines variable set to read each line in the file
 
+# lines variable set to read each line in the file
 def main():
     with open(file, 'r', newline='') as csv_file:
         lines = csv_file.readlines()
 
-        # add the month joined to the fields
-        
 
+
+        # add the month joined to the fields
         fields = mod.line_to_row(lines[0])
         nice_fields = mod.line_to_row(
             mod.make_nice_name(lines[0]))
@@ -41,7 +41,7 @@ def main():
                 transformed_record = mod.transform_record(
                     record)
 
-                # use the row writer method to write the tranformed record for each row
+                # use the row writer method to write the transformed record for each row
                 # new record month joined is changed
                 transformed_record['month_joined'] = mod.get_month(
                     str(transformed_record['full_reserve_avengers_intro']))
