@@ -4,6 +4,22 @@ import calendar
 """calls the function that is to be used in the script
  returns the days since joined
  """
+"""
+    Module: util
+
+    This is container for the helper functions.
+
+    Functions:
+    1. get_month
+    2. get_month
+    3. get_date_joined
+    4. days_since_joined
+    5. line_to_row
+    6. row_to_record
+    7. make_nice_name
+    8. transform_record
+
+"""
 def main():
     print(days_since_joined('2013', '13-Nov'))
 
