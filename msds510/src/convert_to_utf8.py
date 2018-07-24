@@ -1,5 +1,5 @@
-import sys  # import the library
-import csv  # import the csv file
+import sys
+import csv
 
 # there will be list of arguments set in the system/library where the scripts will run
 

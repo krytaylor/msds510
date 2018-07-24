@@ -1,5 +1,4 @@
-import \
-    msds510.util as mod
+import msds510.util as mod
 import sys
 import csv
 
@@ -10,6 +9,8 @@ modified_file = arg_list[2]
 
 
 # lines variable set to read each line in the file
+
+"""defines the function"""
 def main():
     with open(file, 'r', newline='') as csv_file:
         lines = csv_file.readlines()

@@ -33,18 +33,18 @@ with open(file, 'r', newline='') as csv_file:
         csv_writer = csv.DictWriter(new_file, fieldnames=pretty_names,
                                     delimiter=',')
 
-        csv_writer.writeheader()  # the writer method to write the fieldnames
+        csv_writer.writeheader()
 
         # writing one line at a time in the new csv file
         for line in csv_reader:
 
             keys = []
             values = line.values()
-        # for each key in the list, add make_nice_name(key) to the dictionary keys
+            # for each key in the list, add make_nice_name(key) to the dictionary keys
             for key in line:
                 keys.append(
                     make_nice_name(key))
 
-        # use writer method to write the row
+            # use writer method to write the row
             row = dict(zip(keys, values))
             csv_writer.writerow(row)

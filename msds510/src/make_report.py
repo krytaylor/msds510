@@ -17,12 +17,12 @@ file = open(mark_down, 'w')
 with open(filename, 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
 
-    for line in csv_reader:  # for each line in the reader
+    for line in csv_reader:
 
         # if rank is equal to 11 then break. Stop because mark_down is for the top 10
         if rank == 11:
             break
-         # conditions of the mark_down: ranking, number of appearances, strip of newline character, include year joined,
+        # conditions of the mark_down: ranking, number of appearances, strip of newline character, include year joined,
         # years since joining, URL and notes.
         file.write('# ' + str(rank) + '. ' + line[
             'name_alias'] + '\n')
@@ -34,6 +34,6 @@ with open(filename, 'r') as csv_file:
         file.write(line['notes'] + '\n')
         file.write('\n')
 
-        rank += 1  # add the ranking from 1
+        rank += 1
 
-    file.close()  # close file
+    file.close()
