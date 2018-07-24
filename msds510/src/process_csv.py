@@ -15,11 +15,12 @@ def main():
         lines = csv_file.readlines()
 
         # add the month joined to the fields
+        
 
         fields = mod.line_to_row(lines[0])
         nice_fields = mod.line_to_row(
             mod.make_nice_name(lines[0]))
-        nice_fields.append('month_joined')  # add the month joined to the fields
+        nice_fields.append('month_joined')  
 
         # open modfied and processed file in write mode
         lines.remove(lines[0])
