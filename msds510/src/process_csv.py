@@ -9,6 +9,7 @@ file = arg_list[1]
 modified_file = arg_list[2]
 
 # lines variable set to read each line in the file
+
 def main():
     with open(file, 'r', newline='') as csv_file:
         lines = csv_file.readlines()
