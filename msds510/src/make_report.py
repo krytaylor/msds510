@@ -1,5 +1,5 @@
-import msds510.util as mod
 import csv
+
 import sys
 
 arg_list = sys.argv
@@ -16,8 +16,8 @@ with open(filename, 'r') as csv_file:  # open file in readmode
     csv_reader = csv.DictReader(csv_file)  # read as a dictionary entry
 
     for line in csv_reader:  # for each line in the reader
-
-        if rank == 11:  # if rank is equal to 11 then break. Stop because mark_down is for the top 10
+# if rank is equal to 11 then break. Stop because mark_down is for the top ten
+        if rank == 11:
             break
 
         file.write('# ' + str(rank) + '. ' + line[

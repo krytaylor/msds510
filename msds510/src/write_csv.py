@@ -6,9 +6,10 @@ arg_list = sys.argv
 
 # Using csv library, first 'avengers.csv' is opened to as read mode and reading, decoding as ISO-8859-1
 # each line and writing each line to 'avengers_utf.csv' encoded as 'utf-8' character encoding
+
+"""calls the names that is to be used in the script"""
 def make_nice_name(name):
     return name.replace(' ', '_').replace('/', '_').lower().strip()  # create dictionary that replaces spaces and slashes with underscores, and lowercase
-
 
 file = arg_list[1]  # file and modified file variables set to the two arguments. The input and output
 modified_file = arg_list[2]
