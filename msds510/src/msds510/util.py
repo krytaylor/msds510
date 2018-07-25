@@ -1,52 +1,130 @@
 import datetime
 import calendar
 
+"""
+    Module: util
 
-def main():          #defines module
-    print(days_since_joined('2013', '13-Nov'))   #display days since joined
+    This is container for the helper functions.
+
+    Functions:
+    1. get_month
+    2. get_month
+    3. get_date_joined
+    4. days_since_joined
+    5. line_to_row
+    6. row_to_record
+    7. make_nice_name
+    8. transform_record
+
+"""
+
+# defines module
+def main():
+    print(days_since_joined('2013', '13-Nov'))
+
+ """
+    Do extract the month from a date
+
+    Returns : datetime
+
+    Input arguments: datetime
+
+    """
 
 def get_month(date):
-
-    if len(date) == 0 or date == 'YES':                   #if date since joined is 0 or YES, return teh date rows
+    # date split by delimiter
+    if len(date) == 0 or date == 'YES':
         return
-    date = date.split('-')       #date split by delimiter
+    date = date.split('-')
 
-    month = date[1] if date[0].isdigit() else date[0]      #month is the date from second row if all the dates in the header are digits or else date will be same as in header row
+    # month is the date from second row if all the dates in the header are digits or else date will be same as header
 
-    return datetime.datetime.strptime(month,'%b').month  #return datetime with month
+    month = date[1] if date[0].isdigit() else date[0]
 
-def get_date_joined(year,day):                  #get date joined for year and day
-    date = day.split('-')                       #date is set to the day split by delimiter
+    return datetime.datetime.strptime(month, '%b').month
 
-    year = int(year)                          #year is set to integer year
+"""
+    Do returns date a particular character joining the avenger
+
+    Returns : datetime
+
+    Input arguments: int , datetime
+
+    """
+def get_date_joined(year, day):
+    date = day.split('-')
+
+    # year is set to integer year
+    year = int(year)
     month = get_month(day)
 
-    day = int(date[0] if date[0].isdigit() else date[1])%calendar.monthrange(year,month)[1]  #get day number if same as header row or else the second row
+    # get day number if same as header row or else the second row
 
-    return datetime.date(year,month,day)                     #return the date in format year, month and day
+    day = int(date[0] if date[0].isdigit() else date[1]) % calendar.monthrange(year, month)[1]
 
-def days_since_joined(year,day):
-    today = datetime.date.today()                     #today's date
+    return datetime.date(year, month, day)
 
-    return today - get_date_joined(year,day)           #subtract date joined year and day by today's date
+"""
+    Do returns number of days since a particular character joined the avenger
 
+    Returns : datetime
+
+    Input arguments: int , datetime
+
+    """
+def days_since_joined(year, day):
+    today = datetime.date.today()
+
+    return today - get_date_joined(year, day)
+
+
+# for each line in a row return the line split with delimiter, separated by commas
+"""
+    Do convert a line from csv file to a rowlist
+
+    Returns : str
+
+    Input arguments: list
+
+    """
 def line_to_row(line):
-    return line.split(',')                        #for each line in a row return the line split with delimiter, separated by commas
+    return line.split(',')
 
-def row_to_record(row,fields):               #for each row in the record return dictioanry with fields and row
 
-     return dict(zip(fields,row))
+# for each row in the record return dictioanry with fields and row
+"""
+    Do convert a row and it's feilds to a record
 
+    Returns : dictionary
+
+    Input arguments: list, list
+
+    """
+def row_to_record(row, fields):
+    return dict(zip(fields, row))
+
+
+# In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
+"""
+    Do make a name prettier by eliminating  unwanted characters
+
+    Returns : str
+
+    Input arguments: str
+
+    """
 def make_nice_name(name):
-    return name.replace(' ','_').replace('/','_').lower().strip()         #In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
+    return name.replace(' ', '_').replace('/', '_').lower().strip()
 
-def transform_record(record_dict):                   #read transformed record as dictionary
 
-    record_dict['notes'] = record_dict['notes'].strip()              #the strip the dictionary of notes
-    for key, value in record_dict.items():                                #for key in dictionary items value
-        if key == 'death' or key == 'return':                       #if key is death or return, the key will be True or False
+# read transformed record as dictionary
+def transform_record(record_dict):
+    record_dict['notes'] = record_dict['notes'].strip()
+    for key, value in record_dict.items():
+        if key == 'death' or key == 'return':
             record_dict[key] = to_bool(record_dict[key])
     return record_dict
+
 
 if __name__ == "__main__":
     # execute only if run as a script

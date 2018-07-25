@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="85b56146-ca54-4bad-b36c-7f485a283728" name="Default" comment="" />
     <list id="0a5ab38c-452c-4c4f-9796-815c347ce644" name="Comment indentation changes" comment="" />
+=======
+    <list default="true" id="f09a9441-f9d1-462e-9bf2-c49cd784876e" name="Default" comment="" />
+>>>>>>> style-and-documentation
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,6 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="write_csv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/write_csv.py">
@@ -38,6 +43,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+=======
+    <leaf>
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/msds510/util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+>>>>>>> style-and-documentation
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -45,6 +58,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="convert_to_utf8.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/convert_to_utf8.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,6 +73,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+=======
+      <file leaf-file-name="test_util_module.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test_util_module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+>>>>>>> style-and-documentation
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -66,6 +86,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="read_csv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/read_csv.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,6 +113,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+=======
+      <file leaf-file-name="convert_to_utf8.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/convert_to_utf8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+>>>>>>> style-and-documentation
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -103,6 +130,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+<<<<<<< HEAD
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -110,10 +138,13 @@
       </map>
     </option>
     <option name="RESET_MODE" value="HARD" />
+=======
+>>>>>>> style-and-documentation
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/convert_to_utf8.py" />
         <option value="$PROJECT_DIR$/src/make_report.py" />
         <option value="$PROJECT_DIR$/src/process_csv.py" />
@@ -121,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/read_csv.py" />
         <option value="$PROJECT_DIR$/src/test_util_module.py" />
         <option value="$PROJECT_DIR$/src/write_csv.py" />
+=======
+>>>>>>> style-and-documentation
         <option value="$PROJECT_DIR$/src/msds510/util.py" />
       </list>
     </option>
@@ -131,7 +164,10 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> style-and-documentation
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -163,6 +199,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
@@ -180,6 +217,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="329" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="329" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/Music/Midterm Project" />
+>>>>>>> style-and-documentation
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -194,6 +234,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager">
     <configuration name="process_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="msds510" />
@@ -219,11 +260,14 @@
       </list>
     </recent_temporary>
   </component>
+=======
+>>>>>>> style-and-documentation
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2985318" />
@@ -437,12 +481,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+=======
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test_util_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+>>>>>>> style-and-documentation
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/read_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -554,6 +626,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/convert_to_utf8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+>>>>>>> style-and-documentation
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -562,8 +639,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/msds510/util.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+=======
+        <state relative-caret-position="222">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+>>>>>>> style-and-documentation
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
