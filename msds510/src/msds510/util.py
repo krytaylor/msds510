@@ -1,11 +1,35 @@
 import datetime
 import calendar
 
+"""
+    Module: util
+
+    This is container for the helper functions.
+
+    Functions:
+    1. get_month
+    2. get_month
+    3. get_date_joined
+    4. days_since_joined
+    5. line_to_row
+    6. row_to_record
+    7. make_nice_name
+    8. transform_record
+
+"""
 
 # defines module
 def main():
     print(days_since_joined('2013', '13-Nov'))
 
+ """
+    Do extract the month from a date
+
+    Returns : datetime
+
+    Input arguments: datetime
+
+    """
 
 def get_month(date):
     # date split by delimiter
@@ -19,6 +43,14 @@ def get_month(date):
 
     return datetime.datetime.strptime(month, '%b').month
 
+"""
+    Do returns date a particular character joining the avenger
+
+    Returns : datetime
+
+    Input arguments: int , datetime
+
+    """
 def get_date_joined(year, day):
     date = day.split('-')
 
@@ -32,6 +64,14 @@ def get_date_joined(year, day):
 
     return datetime.date(year, month, day)
 
+"""
+    Do returns number of days since a particular character joined the avenger
+
+    Returns : datetime
+
+    Input arguments: int , datetime
+
+    """
 def days_since_joined(year, day):
     today = datetime.date.today()
 
@@ -39,16 +79,40 @@ def days_since_joined(year, day):
 
 
 # for each line in a row return the line split with delimiter, separated by commas
+"""
+    Do convert a line from csv file to a rowlist
+
+    Returns : str
+
+    Input arguments: list
+
+    """
 def line_to_row(line):
     return line.split(',')
 
 
 # for each row in the record return dictioanry with fields and row
+"""
+    Do convert a row and it's feilds to a record
+
+    Returns : dictionary
+
+    Input arguments: list, list
+
+    """
 def row_to_record(row, fields):
     return dict(zip(fields, row))
 
 
 # In the name, replace the spaces with underscore, the slashes with underscore and make lowercase
+"""
+    Do make a name prettier by eliminating  unwanted characters
+
+    Returns : str
+
+    Input arguments: str
+
+    """
 def make_nice_name(name):
     return name.replace(' ', '_').replace('/', '_').lower().strip()
 
